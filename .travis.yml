@@ -1,0 +1,13 @@
+env:
+  global:
+  - TRAVIS_PYTHON_VERSION="2.7"
+os:
+- linux
+sudo: false
+install:
+- echo "Build on $TRAVIS_OS_NAME"
+- bash .ci/travis/install_python.sh
+- export PATH="$HOME/miniconda/bin:$PATH"
+- conda install -q standard_names -c csdms
+script:
+- bash ./scripts/validate_names.sh names.txt
