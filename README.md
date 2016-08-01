@@ -10,6 +10,33 @@ If you would like to add new names to the official CSDMS Standard Names
 Registry, please do so by either submitting it as an issue to the
 [GitHub issue tracker](https://github.com/csdms/standard_names_registry/issues) or as a pull request that adds your new names to `names.txt`.
 
+Some basic rules
+----------------
+
+The [CSDMS wiki](http://csdms.colorado.edu/wiki/CSN_Basic_Rules) provides
+a full description of the basic rules. Below are the basics.
+
+*  Names are of the form: `<object>__<quantity>`.
+*  Names shall contain only lowercase letters and numbers along with the
+   Standard Names separator characters (`_`, `-`, `~`, `__`).
+*  The Standard Names separators:
+   *  `_`: delimite separate words of a name.
+   *  `-`: join multi-word objects, quantities, adjectives, etc.
+   *  `~`: join an adjective to a noun (the noun comes first following by
+      or more adjectives).
+   *  `__`: separate an object from a quantity.
+   *  `_of_`: apply a math operation to the subsequent quantity.
+*  Objects are made more specific by adding clarifying words to the *left*
+   (with increasing specitivity) of a base object.
+
+For those so inclined, here is the current regular expression for a
+CSDMS Standard Names,
+
+    ^[a-z]([a-zA-Z0-9~-]|_(?!_))*(__)[a-z0-9]([a-z0-9~-]|_(?!_))*[a-z0-9]$
+
+With the *standard_names* package, this is the `re` attribute of the
+`StandardName` class (`StandardName.re`).
+
 Helpful links
 -------------
 
