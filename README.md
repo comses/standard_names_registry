@@ -26,8 +26,8 @@ a full description of the basic rules. Below are the basics.
       or more adjectives).
    *  `__`: separate an object from a quantity.
    *  `_of_`: apply a math operation to the subsequent quantity.
-*  Objects are made more specific by adding clarifying words to the *left*
-   (with increasing specitivity) of a base object.
+*  Qualifiers that make an object or quantity more specific are added to
+   the *left* of the base object or quantity (with increasing specitivity).
 
 For those so inclined, here is the current regular expression for a
 CSDMS Standard Names,
