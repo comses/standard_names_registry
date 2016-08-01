@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/csdms/standard_names_registry.svg?branch=master)](https://travis-ci.org/csdms/standard_names_registry)
+
 Master List of CSDMS Standard Names
 ===================================
 
