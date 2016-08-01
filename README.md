@@ -25,17 +25,21 @@ Helpful links
 Scrape names from the CSDMS Wiki
 --------------------------------
 
+There are many examples of CSDMS Standard Names on several pages of the
+[CSDMS wiki](http://csdms.colorado.edu). These names can be scraped with
+the `snscrape` command provided by the
+[standard_names package](https:github.com/csdms/standard_names).
+
     $ snscrape --no-headers \
         https://csdms.colorado.edu/wiki/CSN_Quantity_Templates \
         http://csdms.colorado.edu/wiki/CSN_Object_Templates \
         http://csdms.colorado.edu/wiki/CSN_Operation_Templates \
         http://csdms.colorado.edu/wiki/CSN_Examples > scraped_names.txt
 
-Merge with current master list
-------------------------------
+Merge two lists
+---------------
 
-    $ snscrape --no-headers \
-        https://csdms.colorado.edu/wiki/CSN_Quantity_Templates \
-        http://csdms.colorado.edu/wiki/CSN_Object_Templates \
-        http://csdms.colorado.edu/wiki/CSN_Operation_Templates \
-        http://csdms.colorado.edu/wiki/CSN_Examples | cat - names.txt | sort | uniq > names.txt
+The following command will merge two lists (one name per line, no leading
+or trailing whitespace) into one sorted list of unique names.
+
+    $ cat list1.txt list2.txt | sort | uniq
