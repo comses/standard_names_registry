@@ -5,4 +5,5 @@ URLS="https://csdms.colorado.edu/wiki/CSN_Quantity_Templates
       http://csdms.colorado.edu/wiki/CSN_Operation_Templates
       http://csdms.colorado.edu/wiki/CSN_Examples"
 
+export LC_ALL=C
 snscrape --no-headers $URLS | cat - names.txt | sort | uniq > names.txt
